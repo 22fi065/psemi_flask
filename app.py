@@ -31,8 +31,7 @@ def index():
 
 
 @app.route('/delete/<int:id>')
-def delete(id): 
-    
+def delete(id):
     delete_task = Todo.query.get(id)
     db.session.delete(delete_task)
     db.session.commit()
